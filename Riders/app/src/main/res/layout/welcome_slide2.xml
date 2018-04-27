@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/bike8"
+        >
+
+
+        <TextView
+            style="@style/text_welcome_view_25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="60dp"
+            android:text="@string/slide_2_desc"
+            android:textAlignment="center"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

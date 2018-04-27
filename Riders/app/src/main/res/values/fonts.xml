@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Typeface type = Typeface.createFromAsset(getAssets(),"fonts/arial.ttf");
+    textView.setTypeface(type);-->
+   <!-- /*
+    * Dancing Script Text
+    */-->
+    <string name="Dancing_Regular">DancingScript-Regular.ttf</string>
+    <string name="Dancing_Bold">DancingScript-Bold.ttf</string>
+</resources>

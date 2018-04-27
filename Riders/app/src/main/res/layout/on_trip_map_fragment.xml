@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_fragment_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/fragment_view_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/header_multi_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/header"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <com.shitij.goyal.slidebutton.SwipeButton
+            android:id="@+id/slide"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:gravity="center"
+            android:text="START TRIP"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:after_confirmation_background="#000000"
+            app:button_confirm_text="END TRIP"
+            app:button_swipe_text="STARTING TRIP"
+            app:gradient_color_1="#000000"
+            app:gradient_color_2="#000000"
+            app:gradient_color_2_width="100dp"
+            app:gradient_color_3="#000000"
+            app:swipe_mode="clamp"
+            app:threshold="0.6" />
+
+        <ImageView
+            android:id="@+id/imgArrowStart"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/swipe_arrow" />
+
+        <ImageView
+            android:id="@+id/imgArrowCenter"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/swipe_arrow" />
+
+        <ImageView
+            android:id="@+id/imgArrowEnd"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/swipe_arrow" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

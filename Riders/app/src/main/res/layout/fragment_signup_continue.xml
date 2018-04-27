@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signup_back2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_slogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="No road is too long when you have good company"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/signup_slogan_textsize"
+                android:textStyle="bold|italic"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_slogan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/signup_logo_margintop"
+                android:background="@drawable/twitter_icon" />
+
+
+            <EditText
+                android:id="@+id/et_bloodgrp"
+                android:layout_width="@dimen/signup_field_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="@dimen/signup_drawable_padding"
+                android:hint="@string/signup_hint_bg"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/signup_field_textsize" />
+
+            <EditText
+                android:id="@+id/et_sos1"
+                android:layout_width="@dimen/signup_field_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_bloodgrp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/signup_field_margin_top"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="@dimen/signup_drawable_padding"
+                android:hint="@string/signup_hint_sos1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/signup_field_textsize" />
+
+            <EditText
+                android:id="@+id/et_sos2"
+                android:layout_width="@dimen/signup_field_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_sos1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/signup_field_margin_top"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="@dimen/signup_drawable_padding"
+                android:hint="@string/signup_hint_sos2"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/signup_field_textsize" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="@dimen/signup_field_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_sos2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/signup_field_margin_top"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="@dimen/signup_drawable_padding"
+                android:hint="@string/signup_hint_mail"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/signup_field_textsize" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="@dimen/signup_field_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/signup_field_margin_top"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/pass"
+                android:drawablePadding="@dimen/signup_drawable_padding"
+                android:hint="@string/signup_hint_pswrd"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/signup_field_textsize" />
+
+            <Button
+                android:id="@+id/btn_signup_register"
+                android:layout_width="@dimen/signup_button_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_password"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_btn"
+                android:layout_marginTop="@dimen/signup_button_margintop"
+                android:text="REGISTER"
+                android:textColor="@color/white"
+                android:textSize="@dimen/signup_btn_textsize" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

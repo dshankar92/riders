@@ -1,0 +1,98 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="HomeDataBinding">
+
+        <variable
+            name="HomeViewModel"
+            type="com.bikegroup.riders.view.model.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_rider_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/view_pager_top" />
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lLFlipImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5">
+
+                <com.bikegroup.riders.view.utils.components.FlipImageView xmlns:fiv="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/mFlipImageViewLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fiv:flipDuration="900"
+                    fiv:flipRotations="y"
+                    fiv:isAnimated="true"
+                    fiv:isFlipped="true"
+                    android:scaleType="fitXY"
+                    fiv:reverseRotation="true"
+                    />
+                <include layout="@layout/layout_likes_comments" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <com.bikegroup.riders.view.utils.components.FlipImageView xmlns:fiv="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/mFlipImageViewRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fiv:flipDuration="900"
+                    fiv:flipRotations="y"
+                    fiv:isAnimated="true"
+                    fiv:isFlipped="true"
+                    android:scaleType="fitXY"
+                    fiv:reverseRotation="false" />
+                <include layout="@layout/layout_likes_comments" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_rider_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/view_pager_bottom" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

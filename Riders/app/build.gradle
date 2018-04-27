@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    dexOptions {
+        preDexLibraries = false
+    }
+    defaultConfig {
+        applicationId "com.bikegroup.riders"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding
+            {
+                enabled true
+            }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$rootProject.appcompactversion"
+    implementation "com.android.support:cardview-v7:$rootProject.cardviewversion"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    implementation 'com.andkulikov:transitionseverywhere:1.7.9'
+    implementation 'com.shitij.goyal:slide-button:1.0.0'
+    //Google API Place data
+    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.google.android.gms:play-services-places:12.0.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    // alternatively, just ViewModel
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    //Circular Image View
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+    //Volley
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+}
+//apply plugin: 'com.google.gms.google-services'

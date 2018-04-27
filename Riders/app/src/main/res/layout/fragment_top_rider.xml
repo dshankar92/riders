@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/iv_rider"
+            android:layout_width="@dimen/circular_iv_home_dimen"
+            android:layout_height="@dimen/circular_iv_home_dimen"
+            android:layout_centerInParent="true"
+            app:civ_shadow="true"
+            app:civ_shadow_color="@color/cardview_shadow_end_color"
+            app:civ_shadow_radius="2.5" />
+
+        <include
+            layout="@layout/layout_likes_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
